@@ -9,8 +9,8 @@ const Login = () => {
 			submitText="Login"
 			addition={
 				<p>
-					Don&apos;t have an account yet?
-					<Link href="/register">Register</Link>
+					Don&apos;t have an account yet?&nbsp;
+					<Link className="text-blue" href="/register">Register</Link>
 				</p>
 			}
 		/>

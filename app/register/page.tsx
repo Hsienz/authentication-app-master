@@ -8,7 +8,7 @@ const Register = () => {
 			title="Join thousands of learners from around the world"
 			desc="Master web development by making real-life projects. There are multiple paths for you to choose"
 			submitText="Start coding now"
-            addition={<p>Already a member? <Link href="./login">Login</Link></p>}
+            addition={<p>Already a member?&nbsp;<Link className="text-blue" href="./login">Login</Link></p>}
 		/>
 	);
 };

@@ -9,6 +9,7 @@ import iconGithub from "@/public/assets/Gihub.svg";
 import iconGoogle from "@/public/assets/Google.svg";
 import iconTwitter from "@/public/assets/Twitter.svg";
 import iconDev from "@/public/assets/devchallenges.svg"
+import {signIn} from 'next-auth/react'
 interface Props {
 	title: string;
 	desc?: string;
@@ -19,7 +20,7 @@ interface Props {
 const SNS = [
 	{
 		buttonAttrs: {
-			onClick: () => {},
+			onClick: () => signIn('google'),
 		},
 		imageAttrs: {
 			src: iconGoogle,
@@ -35,7 +36,7 @@ const SNS = [
 	},
 	{
 		buttonAttrs: {
-			onClick: () => {},
+			onClick: () => signIn('twitter'),
 		},
 		imageAttrs: {
 			src: iconTwitter,
@@ -43,7 +44,7 @@ const SNS = [
 	},
 	{
 		buttonAttrs: {
-			onClick: () => {},
+			onClick: () => signIn('github'),
 		},
 		imageAttrs: {
 			src: iconGithub,

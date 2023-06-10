@@ -28,7 +28,7 @@ const SNS = [
 	},
 	{
 		buttonAttrs: {
-			onClick: () => {},
+			onClick: () => signIn('facebook'),
 		},
 		imageAttrs: {
 			src: iconFacebook,

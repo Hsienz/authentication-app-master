@@ -1,7 +1,6 @@
-"use client"
 import "./globals.css";
 import { Noto_Sans } from "next/font/google";
-import { SessionProvider } from "next-auth/react";
+import SessionProvider from "@/contexts/SessionProvider";
 
 const notoSans = Noto_Sans({
 	subsets: ["latin"],
@@ -23,7 +22,7 @@ export default function RootLayout({
 			<body
 				className={`${notoSans.className} flex justify-center items-center min-h-screen`}
 			>
-				 {children}
+				<SessionProvider>{children}</SessionProvider>
 			</body>
 		</html>
 	);

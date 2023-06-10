@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { FormEvent, FormHTMLAttributes } from "react";
 import InputBar from "./InputBar";
 import iconMail from "@/public/assets/mail_FILL1_wght400_GRAD0_opsz48.svg";
 import iconLock from "@/public/assets/lock_FILL1_wght400_GRAD0_opsz48.svg";
@@ -15,6 +15,7 @@ interface Props {
 	desc?: string;
 	submitText: string;
 	addition?: JSX.Element;
+	formAttrs?: FormHTMLAttributes<HTMLFormElement>
 }
 
 const SNS = [
@@ -54,7 +55,7 @@ const SNS = [
 
 const AccountForm = (props: Props) => {
 	return (
-		<div className="rounded-lg gap-4 flex flex-col sm:border-grayBD sm:border-2 p-14 max-w-[475px]">
+		<form {...props.formAttrs} className="rounded-lg gap-4 flex flex-col sm:border-grayBD sm:border-2 p-14 max-w-[475px]">
             <Image src={iconDev} width={150} height={50} alt="" className="pointer-events-none"/>
 			<p className="text-lg font-semibold text-gray33">{props.title}</p>
 			<p className="text-gray33">{props.desc}</p>
@@ -79,7 +80,7 @@ const AccountForm = (props: Props) => {
 				</div>
 				{props.addition && props.addition}
 			</div>
-		</div>
+		</form>
 	);
 };
 
